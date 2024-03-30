@@ -1,0 +1,267 @@
+[
+    {
+      "food_name": "Margherita Pizza",
+      "food_image": "https://i.ibb.co/3Tq1dy0/tomato-basil-Pizza-newyork.jpg",
+      "food_category": "Pizza",
+      "quantity": 5,
+      "price": 5,
+      "count": 0,
+      "added_by": "Chef Mario",
+      "food_origin_country": "Italy",
+      "description": "A classic Italian pizza topped with fresh tomatoes, mozzarella cheese, basil, and a drizzle of olive oil. Baked to perfection in a wood-fired oven."
+    },
+    {
+      "food_name": "Sea Bass Fish",
+      "food_image": "https://i.ibb.co/HFVq0KN/sea-bass.jpg",
+      "food_category": "Japanese",
+      "quantity": 10,
+      "price": 18,
+      "count": 0,
+      "added_by": "Sushi Chef Kenji",
+      "food_origin_country": "Japan",
+      "description": "An exquisite assortment of sushi, including nigiri, sashimi, and maki rolls. Made with the freshest seafood and served with soy sauce and wasabi."
+    },
+    {
+      "food_name": "Oven Rosted Turkey",
+      "food_image": "https://i.ibb.co/DftPgn3/Oven-Roasted-Turkey.jpg",
+      "food_category": "Turkey",
+      "quantity": 4,
+      "price": 14,
+      "count": 0,
+      "added_by": "Chef Priya",
+      "food_origin_country": "Turkey",
+      "description": "Tender pieces of marinated chicken cooked in a creamy tomato sauce with a blend of aromatic spices. Served with naan bread or rice."
+    },
+    {
+      "food_name": "German Steak",
+      "food_image": "https://i.ibb.co/QbwsHW3/germany-Steak.jpg",
+      "food_category": "Germany",
+      "quantity": 10,
+      "price": 9,
+      "count": 0,
+      "added_by": "Chef Carlos",
+      "food_origin_country": "Germany",
+      "description": "Soft tortillas filled with seasoned ground beef, lettuce, tomatoes, cheese, sour cream, and a dash of hot sauce for a spicy kick."
+    },
+    {
+      "food_name": "Chocolate China Pudding",
+      "food_image": "https://i.ibb.co/p1F9GY6/Chocolate-Chia-Pudding.jpg",
+      "food_category": "Pudding",
+      "quantity": 10,
+      "price": 8,
+      "count": 0,
+      "added_by": "Chef Elena",
+      "food_origin_country": "China",
+      "description": "A refreshing salad with a mix of crisp cucumbers, ripe tomatoes, Kalamata olives, red onions, and feta cheese. Drizzled with olive oil and oregano."
+    },
+    {
+      "food_name": "Patch Baan",
+      "food_image": "https://i.ibb.co/gZmjwND/patchBan.jpg",
+      "food_category": "Japanese",
+      "quantity": 5,
+      "price": 5,
+      "count": 0,
+      "added_by": "Chef Hiroshi",
+      "food_origin_country": "Japan",
+      "description": "Succulent slices of beef marinated in a sweet and savory teriyaki sauce, grilled to perfection, and served with steamed rice and vegetables."
+    },
+    {
+      "food_name": "Cheeseburger",
+      "food_image": "https://i.ibb.co/q907RJX/Amsterdam-based-burger.jpg",
+      "food_category": "American",
+      "quantity": 2,
+      "price": 7,
+      "count": 0,
+      "added_by": "Chef Mike",
+      "food_origin_country": "USA",
+      "description": "A classic cheeseburger featuring a juicy beef patty, melted cheese, lettuce, tomato, pickles, and a special house-made sauce."
+    },
+    {
+      "food_name": "Spaghetti Bolognese",
+      "food_image": "spaghetti_bolognese.jpg",
+      "food_category": "Italian",
+      "quantity": 1 ,
+      "price": 11.99,
+      "count": 0,
+      "added_by": "Chef Isabella",
+      "food_origin_country": "Italy",
+      "description": "Al dente spaghetti served with a rich and savory Bolognese sauce made from ground beef, tomatoes, and herbs, topped with Parmesan cheese."
+    },
+    {
+      "food_name": "Shrimp Pad Thai",
+      "food_image": "https://i.ibb.co/1X1QcFN/Onion-Olives-bread.jpg",
+      "food_category": "Thai",
+      "quantity": 5,
+      "price": 15,
+      "count": 0,
+      "added_by": "Chef Nong",
+      "food_origin_country": "Thailand",
+      "description": "A flavorful Thai stir-fried noodle dish with shrimp, tofu, bean sprouts, and peanuts in a tamarind-based sauce, garnished with lime and cilantro."
+    },
+    {
+      "food_name": "Mango Pudding",
+      "food_image": "https://i.ibb.co/27K13sv/mango-pudding.jpg",
+      "food_category": "Italian",
+      "quantity": 2,
+      "price": 6.99,
+      "count": 0,
+      "added_by": "Chef Luigi",
+      "food_origin_country": "Italy",
+      "description": "A classic Italian dessert made with layers of coffee-soaked ladyfingers and mascarpone cheese, dusted with cocoa powder."
+    },
+    {
+      "food_name": "Colombo Steak",
+      "food_image": "https://i.ibb.co/n8DkVhS/colombo-Steak.jpg",
+      "food_category": "Chinese",
+      "quantity": 6,
+      "price": 12,
+      "count": 0,
+      "added_by": "Chef Li",
+      "food_origin_country": "China",
+      "description": "Crispy battered chicken pieces tossed in a sweet and tangy sesame sauce, sprinkled with sesame seeds, and served with steamed rice."
+    },
+    {
+      "food_name": "Burratta Pizza",
+      "food_image": "https://i.ibb.co/Sr7xX1h/burratta-pizza-india.jpg",
+      "food_category": "India",
+      "quantity": 20,
+      "price": 9,
+      "count": 0,
+      "added_by": "Chef Sofia",
+      "food_origin_country": "Italy",
+      "description": "A simple and delicious salad with ripe tomatoes, fresh mozzarella, basil leaves, drizzled with balsamic glaze and olive oil."
+    },
+    {
+      "food_name": "Fish Dish",
+      "food_image": "https://i.ibb.co/LnP7Dd3/Fish-in-Karelia.jpg",
+      "food_category": "India",
+      "quantity": 20,
+      "price": 9,
+      "count": 0,
+      "added_by": "Chef Sofia",
+      "food_origin_country": "Italy",
+      "description": "A simple and delicious salad with ripe tomatoes, fresh mozzarella, basil leaves, drizzled with balsamic glaze and olive oil."
+    },
+    {
+      "food_name": "Wheat Bread",
+      "food_image": "https://i.ibb.co/0qm4ZhJ/wheatbread.jpg",
+      "food_category": "India",
+      "quantity": 20,
+      "price": 9,
+      "count": 0,
+      "added_by": "Chef Sofia",
+      "food_origin_country": "Italy",
+      "description": "A simple and delicious salad with ripe tomatoes, fresh mozzarella, basil leaves, drizzled with balsamic glaze and olive oil."
+    },
+    {
+      "food_name": "Thi Pudding",
+      "food_image": "https://i.ibb.co/NpBD82N/thipuding.jpg",
+      "food_category": "India",
+      "quantity": 20,
+      "price": 9,
+      "count": 0,
+      "added_by": "Chef Sofia",
+      "food_origin_country": "Italy",
+      "description": "A simple and delicious salad with ripe tomatoes, fresh mozzarella, basil leaves, drizzled with balsamic glaze and olive oil."
+    },
+    {
+      "food_name": "Potato Steak",
+      "food_image": "https://i.ibb.co/VNsFxDN/potato-Steak.jpg",
+      "food_category": "India",
+      "quantity": 20,
+      "price": 9,
+      "count": 0,
+      "added_by": "Chef Sofia",
+      "food_origin_country": "Italy",
+      "description": "A simple and delicious salad with ripe tomatoes, fresh mozzarella, basil leaves, drizzled with balsamic glaze and olive oil."
+    },
+    {
+      "food_name": "Argentian Hot Pizza",
+      "food_image": "https://i.ibb.co/Dtrm2Rx/hot-Pizza-argentina.jpg",
+      "food_category": "India",
+      "quantity": 20,
+      "price": 9,
+      "count": 0,
+      "added_by": "Chef Sofia",
+      "food_origin_country": "Italy",
+      "description": "A simple and delicious salad with ripe tomatoes, fresh mozzarella, basil leaves, drizzled with balsamic glaze and olive oil."
+    },
+    {
+      "food_name": "Indian Fish Curry",
+      "food_image": "https://i.ibb.co/9vjxzrh/indian-Fish-Curry.jpg",
+      "food_category": "India",
+      "quantity": 20,
+      "price": 9,
+      "count": 0,
+      "added_by": "Chef Sofia",
+      "food_origin_country": "Italy",
+      "description": "A simple and delicious salad with ripe tomatoes, fresh mozzarella, basil leaves, drizzled with balsamic glaze and olive oil."
+    },
+    {
+      "food_name": "Sourdough Bread",
+      "food_image": "https://i.ibb.co/1LWn1n9/sourdough-bread.jpg",
+      "food_category": "India",
+      "quantity": 20,
+      "price": 9,
+      "count": 0,
+      "added_by": "Chef Sofia",
+      "food_origin_country": "Italy",
+      "description": "A simple and delicious salad with ripe tomatoes, fresh mozzarella, basil leaves, drizzled with balsamic glaze and olive oil."
+    },
+    {
+      "food_name": "Chocolalte China Pudding",
+      "food_image": "https://i.ibb.co/p1F9GY6/Chocolate-Chia-Pudding.jpg",
+      "food_category": "India",
+      "quantity": 20,
+      "price": 9,
+      "count": 0,
+      "added_by": "Chef Sofia",
+      "food_origin_country": "Italy",
+      "description": "A simple and delicious salad with ripe tomatoes, fresh mozzarella, basil leaves, drizzled with balsamic glaze and olive oil."
+    },
+    {
+      "food_name": "Chicken Steak",
+      "food_image": "https://i.ibb.co/3r6RL4C/chicken-Steak.jpg",
+      "food_category": "India",
+      "quantity": 20,
+      "price": 9,
+      "count": 0,
+      "added_by": "Chef Sofia",
+      "food_origin_country": "Italy",
+      "description": "A simple and delicious salad with ripe tomatoes, fresh mozzarella, basil leaves, drizzled with balsamic glaze and olive oil."
+    },
+    {
+      "food_name": "Hawaiian Chicken Smocked Pizza",
+      "food_image": "https://i.ibb.co/kgZd2rp/usa-Hawaiian-Chicken-Pizza-Smoked.jpg",
+      "food_category": "India",
+      "quantity": 20,
+      "price": 9,
+      "count": 0,
+      "added_by": "Chef Sofia",
+      "food_origin_country": "Italy",
+      "description": "A simple and delicious salad with ripe tomatoes, fresh mozzarella, basil leaves, drizzled with balsamic glaze and olive oil."
+    },
+    {
+      "food_name": "Arabian Chicken Shawrma",
+      "food_image": "https://i.ibb.co/2ZB9dr8/Chicken-Shawarma-an-Arabian-snack.jpg",
+      "food_category": "India",
+      "quantity": 20,
+      "price": 9,
+      "count": 0,
+      "added_by": "Chef Sofia",
+      "food_origin_country": "Italy",
+      "description": "A simple and delicious salad with ripe tomatoes, fresh mozzarella, basil leaves, drizzled with balsamic glaze and olive oil."
+    },
+    {
+      "food_name": "Indoneshain Fish Curry",
+      "food_image": "https://i.ibb.co/QkzPmZR/indonesia-Fish-Fry.jpg",
+      "food_category": "India",
+      "quantity": 20,
+      "price": 9,
+      "count": 0,
+      "added_by": "Chef Sofia",
+      "food_origin_country": "Italy",
+      "description": "A simple and delicious salad with ripe tomatoes, fresh mozzarella, basil leaves, drizzled with balsamic glaze and olive oil."
+    }
+  ]
+  
