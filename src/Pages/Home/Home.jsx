@@ -1,9 +1,9 @@
 import { Helmet } from "react-helmet-async";
 
 import SwiperSlider from "./SwiperSlider";
-import AllFoodItem from "../AllFoodItem/AllFoodItem";
+import AllFoodItem from "../AllTasks/AllTasks";
 import UseAuth from "../../Hooks/UseAuth";
-import useAllFood from "../../Hooks/useAllFood";
+import useAllFood from "../../Hooks/useAllTasks";
 import HomeAllFood from "./Banner";
 import BookATable from "./SetAMeeting";
 import SeasonalMenu from "./SeeMore";

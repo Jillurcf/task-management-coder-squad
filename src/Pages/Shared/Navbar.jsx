@@ -25,7 +25,7 @@ const NavBar = () => {
       </li>
       <li>
         <NavLink
-          to="/allFoodItems"
+          to="/allTasks"
           className={({ isActive, isPending }) =>
           isPending
           ? "pending"

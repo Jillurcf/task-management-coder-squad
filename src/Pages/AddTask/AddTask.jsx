@@ -7,7 +7,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
 
-const AddFood = () => {
+const AddTask = () => {
   const { user } = UseAuth();
   const [addedFood, setaddedFood] = useState([]);
   
@@ -33,36 +33,25 @@ const AddFood = () => {
   const handleAddFood = (e) => {
     e.preventDefault();
     const form = e.target;
-    const food_name = form.foodName.value;
-    const food_image = form.image.value;
-    const food_category = form.category.value;
-    const stringquantity = form.quantity.value;
-    const quantity = parseInt(stringquantity)
-    const stringprice = form.price.value;
-    const price  = parseInt(stringprice);
-    const stringcount = form.count.value;
-    const count = parseInt(stringcount)
+    const task_name = form.taskName.value;
+    const task_image = form.image.value;
+    const task_category = form.category.value;
     const userName = form.userName.value;
     const email = form.userEmail.value;
-    const origin = form.origin.value;
-    const description = form.description.value;
+    const description = form.des.value;
 
     const addFood = {
-      food_name,
-      food_image,
-      food_category,
-      quantity,
-      price,
-      count,
+      task_name,
+      task_image,
+      task_category,
       userName,
       email,
-      origin,
       description,
     };
     console.log(addFood);
 
     axios.post(
-      "https://assignment11-server-side-chi.vercel.app/api/v1/allFood",
+      "http://localhost:5000/addTask",
       addFood,
       { withCredentials: true }
     );
@@ -113,7 +102,7 @@ Swal.fire({
   return (
     <div>
       <Helmet>
-        <title>FoodHero | Add Fodd</title>
+        <title>TM | Add Task</title>
       </Helmet>
       <div
         className="hero min-h-screen"
@@ -127,7 +116,7 @@ Swal.fire({
             <div className="hero min-h-screen ">
               <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="lg:max-w-md max-w-xs">
-                  <h1>Food Added By: {user?.displayName}</h1>
+                  <h1>Task Added By: {user?.displayName}</h1>
 
                   {/* add food */}
                   {addedFood.map((adFood) => (
@@ -142,8 +131,8 @@ Swal.fire({
                               </label>
                             </th>
                             <th>Food Image</th>
-                            <th>Food Name & Origin</th>
-                            <th>Price</th>
+                            <th>Task Name </th>
+                            <th>Description</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -190,21 +179,21 @@ Swal.fire({
                 <div className="hero min-h-screen">
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl ">
                   <form onSubmit={handleAddFood} className=" mt-36 card-body">
-                    <h1 className="text-2xl font-bold">Please add Food</h1>
+                    <h1 className="text-2xl font-bold">Please add a Task</h1>
                     <div className="form-control">
                       <label className="label">
-                        <span className="label-text">Food Name</span>
+                        <span className="label-text">Task Name</span>
                       </label>
                       <input
                         type="text"
-                        name="foodName"
+                        name="taskName"
                         className="input input-bordered"
                         required
                       />
                     </div>
                     <div className="form-control">
                       <label className="label">
-                        <span className="label-text">Food Image</span>
+                        <span className="label-text">Task Image</span>
                       </label>
                       <input
                         type="text"
@@ -215,7 +204,7 @@ Swal.fire({
                     </div>
                     <div className="form-control">
                       <label className="label">
-                        <span className="label-text">Food Category</span>
+                        <span className="label-text">Task Category</span>
                       </label>
                       <input
                         type="text"
@@ -226,16 +215,16 @@ Swal.fire({
                     </div>
                     <div className="form-control">
                       <label className="label">
-                        <span className="label-text">Quantity</span>
+                        <span className="label-text">Description</span>
                       </label>
                       <input
-                        type="number"
-                        name="quantity"
+                        type="text"
+                        name="des"
                         className="input input-bordered"
                         required
                       />
                     </div>
-                    <div className="form-control">
+                    {/* <div className="form-control">
                       <label className="label">
                         <span className="label-text">Price</span>
                       </label>
@@ -245,8 +234,8 @@ Swal.fire({
                         className="input input-bordered"
                         required
                       />
-                    </div>
-                    <div className="form-control">
+                    </div> */}
+                    {/* <div className="form-control">
                       <label className="label">
                         <span className="label-text">Count:</span>
                       </label>
@@ -256,7 +245,7 @@ Swal.fire({
                         className="input input-bordered"
                         required
                       />
-                    </div>
+                    </div> */}
                     <div className="form-control">
                       <label className="label">
                         <span className="label-text">Added By</span>
@@ -276,7 +265,7 @@ Swal.fire({
                         required
                       />
                     </div>
-                    <div className="form-control">
+                    {/* <div className="form-control">
                       <label className="label">
                         <span className="label-text">Food Origin</span>
                       </label>
@@ -286,7 +275,7 @@ Swal.fire({
                         className="input input-bordered"
                         required
                       />
-                    </div>
+                    </div> */}
                     <div className="form-control">
                       <label className="label">
                         <span className="label-text">Short Description</span>
@@ -299,7 +288,7 @@ Swal.fire({
                       />
                     </div>
                     <div className="form-control mt-6">
-                      <button className="btn btn-primary">Add Food</button>
+                      <button className="btn btn-primary">Add Task</button>
                     </div>
                   </form>
                 </div>
@@ -313,4 +302,4 @@ Swal.fire({
   );
 };
 
-export default AddFood;
+export default AddTask;

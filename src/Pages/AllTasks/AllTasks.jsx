@@ -1,16 +1,16 @@
 import { Helmet } from "react-helmet-async";
 
-import AllFoodCard from "./AllFoodCard";
+import AllTasksCard from "./AllTasksCard";
 import { useEffect, useState } from "react";
-import "./AllFood.css";
+import "./AllTasks.css";
 import UseAuth from "../../Hooks/UseAuth";
 
-const AllFoodItem = () => {
-  // const allFood = useAllFood();
+const AllTasks = () => {
 
-  const [allFood, setAllFood] = useState([]);
+
+  const [allTasks, setAllTasks] = useState([]);
   const [item, setItem] = useState(null)
-  console.log(allFood);
+  console.log(allTasks);
   const [currentPage, setCurrentPage] = useState(0);
   const [itemsPerPage, setItemsPerPage] = useState(10);
   const [count, setCount] = useState(0);
@@ -26,17 +26,17 @@ const AllFoodItem = () => {
   console.log(pages);
 
   useEffect(() => {
-    fetch("https://assignment11-server-side-chi.vercel.app/api/v1/allFoodCount")
+    fetch("http://localhost:5000/allTaskCount")
       .then((res) => res.json())
       .then((data) => setCount(data.count));
   }, []);
 
   useEffect(() => {
     fetch(
-      `https://assignment11-server-side-chi.vercel.app/api/v1/allFood?page=${currentPage}&size=${itemsPerPage}`
+      `http://localhost:5000/newTasks?page=${currentPage}&size=${itemsPerPage}`
     )
       .then((res) => res.json())
-      .then((data) => setAllFood(data));
+      .then((data) => setAllTasks(data));
   }, [currentPage, itemsPerPage]);
 
   const handleItemsPerPage = (e) => {
@@ -63,11 +63,11 @@ const AllFoodItem = () => {
   }
 
   const HandleSearch = () => {
-    const itemCategory = allFood.filter(
-      (food) => food.food_name === item
+    const itemCategory = allTasks.filter(
+      (tasks) => tasks.task_name === item
     );
 
-    setAllFood(itemCategory);
+    setAllTasks(itemCategory);
   };
   const handleChange = (e) => {
     setItem(e.target.value);
@@ -80,12 +80,10 @@ const AllFoodItem = () => {
 
       <div className="bg-blue-900 h-[300px] w-full">
         <h1 className="text-center md:text-6xl text-2xl font-bold text-white pt-36 ">
-          All Food Items
+          All Tasks
         </h1>
         <p className="text-center text-white">
-          Good food is more than just sustenance; it is a source of pleasure,
-          nourishment, <br /> and culture. It goes beyond mere sustenance to
-          evoke emotions and connect people.
+         Task management is very importan to us
         </p>
       </div>
       <div className="w-full h-[100px] py-4 bg-blue-900 lg:flex">
@@ -94,7 +92,7 @@ const AllFoodItem = () => {
             <input
               onChange={handleChange}
               type="text"
-              placeholder="Search by Food Name"
+              placeholder="Search by Task Name"
               className="input input-bordered"
             />
             <button
@@ -118,9 +116,9 @@ const AllFoodItem = () => {
           </div>
         </div>
       </div>
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
-        {allFood.map((food) => (
-          <AllFoodCard key={food._id} food={food}></AllFoodCard>
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-12 mt-24">
+        {allTasks.map((tasks) => (
+          < AllTasksCard key={tasks._id} tasks={tasks}></ AllTasksCard>
         ))}
       </div>
       <div className="pagination">
@@ -152,4 +150,4 @@ const AllFoodItem = () => {
   );
 };
 
-export default AllFoodItem;
+export default AllTasks;

@@ -1,29 +1,34 @@
-import { useState } from "react";
-import useAllFood from "../../Hooks/useAllFood";
-import HomeAllFoodCard from "./HomeAllFoodCard";
+
 import UseAuth from "../../Hooks/UseAuth";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
-  const allFood = useAllFood();
- 
-  const [isShow, setIsShow] = useState(false);
+  
   const {isLoading} = UseAuth();
   if(isLoading){
     return <progress className="progress w-56"></progress>
   }
   return (
     <div>
-      {/* <h1 className='text-6xl font-bold text-blue-600 text-center'>All Food</h1> */}
+      
       <div className="bg-blue-900 h-[300px] w-full">
         <h1 className="text-center md:text-6xl text-2xl font-bold text-white py-12 ">
-        Add a Task
+       Tasks Management Application
         </h1>
-        <div className="max-w-[300px] mx-auto flex justify-between">
+        <div className="max-w-[600px] mx-auto flex justify-evenly">
           <div>
             
-          <button className="btn btn-outline btn-warning">Add new tasks</button>
+          <Link to="/addTask"><button className="btn btn-outline btn-warning">Add new tasks</button></Link>
           </div>
-          <div><button className="btn btn-outline btn-secondary">View All tasks</button></div>
+          <div>
+           <Link to="/allTasks"> <button className="btn btn-outline btn-secondary">Ongoing Tasks</button></Link>
+            </div>
+          <div>
+           <Link to="/allTasks"> <button className="btn btn-outline btn-success">Finished Tasks</button></Link>
+            </div>
+          <div>
+           <Link to="/allTasks"> <button className="btn btn-outline btn-accent">View All tasks</button></Link>
+            </div>
         </div>
       </div>
       

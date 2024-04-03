@@ -10,7 +10,7 @@ const UpdateFood = () => {
 const {user} = UseAuth()
 const {id} = useParams()
 
-    const handleUpdateFood = (e) => {
+    const handleUpdate = (e) => {
         e.preventDefault();
         const form = e.target;
         const food_name = form.foodName.value;

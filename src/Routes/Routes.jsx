@@ -4,17 +4,15 @@ import {
 import MainLayOut from "../Layout/MainLayOut";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Home from "../Pages/Home/Home";
-import AllFoodItem from "../Pages/AllFoodItem/AllFoodItem";
+import AllTasks from "../Pages/AllTasks/AllTasks";
 import Blog from "../Pages/Blog/Blog";
 import SignIn from "../Pages/SignIn/SignIn";
 import Register from "../Pages/Register/Register";
-import SeeDetail from "../Pages/AllFoodItem/SeeDetail";
+import SeeDetail from "../Pages/AllTasks/SeeDetail";
 import PrivateRoute from "./PrivateRoute";
-import Purchase from "../Pages/Purchase/Purchase";
-import AddFood from "../Pages/AddFood/AddFood";
-import OrderedFood from "../Pages/OrcderedFood/OrderedFood";
 import UpdateFood from "../Pages/UpdateFood/UpdateFood";
 import UserProfile from "../Pages/UserProfile/UserProfile";
+import AddTask from "../Pages/AddTask/AddTask";
 
 const router = createBrowserRouter([
   {
@@ -27,8 +25,8 @@ const router = createBrowserRouter([
             element: <Home></Home>
         },
         {
-          path: 'allFoodItems',
-          element: <AllFoodItem></AllFoodItem>
+          path:'allTasks',
+          element: <AllTasks></AllTasks>
         },
         {
           path: 'blog',
@@ -40,16 +38,11 @@ const router = createBrowserRouter([
           loader: ({params})=> fetch(`https://assignment11-server-side-chi.vercel.app/api/v1/allFood/${params.id}`)
 
         },
+       
         {
-          path: 'purchasePage/:id',
-          element: <PrivateRoute><Purchase></Purchase></PrivateRoute>,
-          loader: ({params})=> fetch(`https://assignment11-server-side-chi.vercel.app/api/v1/allFood/${params.id}`)
-          
-        },
-        {
-          path: 'addFood',
-          element: <AddFood></AddFood>,
-          loader: ()=> fetch('https://assignment11-server-side-chi.vercel.app/api/v1/allFood')
+          path: 'addTask',
+          element: <AddTask></AddTask>
+          // loader: ()=> fetch('https://assignment11-server-side-chi.vercel.app/api/v1/allFood')
         },
         {
           path: 'updateFood/:id',
@@ -57,10 +50,7 @@ const router = createBrowserRouter([
           loader: ({params})=> fetch(`https://assignment11-server-side-chi.vercel.app/api/v1/allFood/${params.id}`)
           
         },
-        {
-          path: 'orderdFood',
-          element: <OrderedFood></OrderedFood>
-        },
+       
        
         
 
