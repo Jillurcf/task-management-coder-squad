@@ -26,7 +26,7 @@ const AllTasks = () => {
   console.log(pages);
 
   useEffect(() => {
-    fetch("http://localhost:5000/allTaskCount")
+    fetch("https://task-management-coder-squad-server.vercel.app/allTaskCount")
       .then((res) => res.json())
       .then((data) => setCount(data.count));
   }, []);
@@ -34,7 +34,7 @@ const AllTasks = () => {
 
   useEffect(() => {
     fetch(
-      `http://localhost:5000/newTasks?page=${currentPage}&size=${itemsPerPage}`
+      `https://task-management-coder-squad-server.vercel.app/newTasks?page=${currentPage}&size=${itemsPerPage}`
     )
       .then((res) => res.json())
       .then((data) => setAllTasks(data));

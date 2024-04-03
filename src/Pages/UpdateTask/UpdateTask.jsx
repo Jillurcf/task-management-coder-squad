@@ -4,53 +4,45 @@ import UseAuth from "../../Hooks/UseAuth";
 import { useLoaderData, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
-const UpdateFood = () => {
-  const newAddedData = useLoaderData();
-  console.log(newAddedData);
+const UpdateTask = () => {
+  const task = useLoaderData();
+  console.log(task);
 const {user} = UseAuth()
 const {id} = useParams()
 
     const handleUpdate = (e) => {
         e.preventDefault();
         const form = e.target;
-        const food_name = form.foodName.value;
-        const food_image = form.image.value;
-        const food_category = form.category.value;
-        const stringquantity = form.quantity.value;
-        const quantity = parseInt(stringquantity);
-        const stringprice = form.price.value;
-        const price = parseInt(stringprice)
-        const stringcount = form.count.value;
-        const count = parseInt(stringcount);
+    const task_name = form.taskName.value;
+    const task_image = form.image.value;
+    const task_category = form.category.value;
+    const userName = form.userName.value;
+    const email = form.userEmail.value;
+    const description = form.description.value;
+    const status = form.status.value
 
-        const userName = form.userName.value;
-        const email = form.userEmail.value;
-        const origin = form.origin.value;
-        const description = form.description.value;
+      
     
-        const updateFood = {
-          food_name,
-          food_image,
-          food_category,
-          quantity,
-          price,
-          count,
+        const updateTask = {
+          task_name,
+          task_image,
+          task_category,
           userName,
           email,
-          origin,
           description,
+          status
         };
-        console.log(updateFood);
+        console.log(updateTask);
     
         axios.put(
-          `https://assignment11-server-side-chi.vercel.app/api/v1/allFood/${id}`,
-         updateFood,
+          `https://task-management-coder-squad-server.vercel.app/alltask/${id}`,
+          updateTask,
           { withCredentials: true }
         )
         .then(res=> {
           console.log(res.data);
         })
-        Swal.fire("Food Updated");
+        Swal.fire("Task Updated");
       
       };
     
@@ -72,80 +64,45 @@ const {id} = useParams()
               <div className="hero-content flex-col lg:flex-row-reverse">
                
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl ">
-                  <form onSubmit={handleUpdateFood} className=" mt-36 card-body">
+                  <form onSubmit={handleUpdate} className=" mt-36 card-body">
                     <h1 className="text-2xl font-bold">Update Food</h1>
                     <div className="form-control">
                       <label className="label">
-                        <span className="label-text">Food Name</span>
+                        <span className="label-text">Task Name</span>
                       </label>
                       <input
                         type="text"
-                        name="foodName"
-                        defaultValue={newAddedData.food_name}
+                        name="taskName"
+                        defaultValue={task.food_name}
                         className="input input-bordered"
                         required
                       />
                     </div>
                     <div className="form-control">
                       <label className="label">
-                        <span className="label-text">Food Image</span>
+                        <span className="label-text">Task Image</span>
                       </label>
                       <input
                         type="text"
                         name="image"
-                        defaultValue={newAddedData.food_image}
+                        defaultValue={task.food_image}
                         className="input input-bordered"
                         required
                       />
                     </div>
                     <div className="form-control">
                       <label className="label">
-                        <span className="label-text">Food Category</span>
+                        <span className="label-text">Task Category</span>
                       </label>
                       <input
                         type="text"
                         name="category"
-                        defaultValue={newAddedData.food_category}
+                        defaultValue={task.food_category}
                         className="input input-bordered"
                         required
                       />
                     </div>
-                    <div className="form-control">
-                      <label className="label">
-                        <span className="label-text">Quantity</span>
-                      </label>
-                      <input
-                        type="number"
-                        name="quantity"
-                        defaultValue={newAddedData.quantity}
-                        className="input input-bordered"
-                        required
-                      />
-                    </div>
-                    <div className="form-control">
-                      <label className="label">
-                        <span className="label-text">Price</span>
-                      </label>
-                      <input
-                        type="number"
-                        name="price"
-                        defaultValue={newAddedData.price}
-                        className="input input-bordered"
-                        required
-                      />
-                    </div>
-                    <div className="form-control">
-                      <label className="label">
-                        <span className="label-text">Count</span>
-                      </label>
-                      <input
-                        type="number"
-                        name="count"
-                        defaultValue={newAddedData.count}
-                        className="input input-bordered"
-                        required
-                      />
-                    </div>
+                    
                     <div className="form-control">
                       <label className="label">
                         <span className="label-text">Added By</span>
@@ -165,18 +122,7 @@ const {id} = useParams()
                         required
                       />
                     </div>
-                    <div className="form-control">
-                      <label className="label">
-                        <span className="label-text">Food Origin</span>
-                      </label>
-                      <input
-                        type="text"
-                        name="origin"
-                        defaultValue={newAddedData.origin}
-                        className="input input-bordered"
-                        required
-                      />
-                    </div>
+
                     <div className="form-control">
                       <label className="label">
                         <span className="label-text">Short Description</span>
@@ -184,13 +130,25 @@ const {id} = useParams()
                       <input
                         type="text"
                         name="description"
-                        defaultValue={newAddedData.description}
+                        defaultValue={task.description}
+                        className="input input-bordered"
+                        required
+                      />
+                    </div>
+                    <div className="form-control">
+                      <label className="label">
+                        <span className="label-text">Status</span>
+                      </label>
+                      <input
+                        type="text"
+                        name="status"
+                        defaultValue={task.status}
                         className="input input-bordered"
                         required
                       />
                     </div>
                     <div className="form-control mt-6">
-                      <button className="btn btn-primary">Update Food</button>
+                      <button className="btn btn-primary">Update Task</button>
                     </div>
                   </form>
                 </div>
@@ -203,4 +161,4 @@ const {id} = useParams()
     );
 };
 
-export default UpdateFood;
+export default UpdateTask;

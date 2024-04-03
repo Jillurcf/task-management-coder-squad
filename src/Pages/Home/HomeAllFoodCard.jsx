@@ -11,7 +11,7 @@ const HomeAllFoodCard = ({food}) => {
 
       const handleCount = (id)=>{      const updateCount = count + 1;
       setPresentCount(updateCount)
-      axios.put(`https://assignment11-server-side-chi.vercel.app/api/v1/allFood/update/${id}`, {count: updateCount}, { withCredentials: true }
+      axios.put(`https://task-management-coder-squad-server.vercel.app/api/v1/allFood/update/${id}`, {count: updateCount}, { withCredentials: true }
       )
       .then(res=> {
         console.log(res.data);

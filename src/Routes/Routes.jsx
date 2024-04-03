@@ -10,9 +10,9 @@ import SignIn from "../Pages/SignIn/SignIn";
 import Register from "../Pages/Register/Register";
 import SeeDetail from "../Pages/AllTasks/SeeDetail";
 import PrivateRoute from "./PrivateRoute";
-import UpdateFood from "../Pages/UpdateFood/UpdateFood";
 import UserProfile from "../Pages/UserProfile/UserProfile";
 import AddTask from "../Pages/AddTask/AddTask";
+import UpdateTask from "../Pages/UpdateTask/UpdateTask";
 
 const router = createBrowserRouter([
   {
@@ -35,19 +35,19 @@ const router = createBrowserRouter([
         {
           path: 'seeDetail/:id',
           element: <SeeDetail></SeeDetail>,
-          loader: ({params})=> fetch(`https://assignment11-server-side-chi.vercel.app/api/v1/allFood/${params.id}`)
+          loader: ({params})=> fetch(`https://task-management-coder-squad-server.vercel.app/api/v1/allFood/${params.id}`)
 
         },
        
         {
           path: 'addTask',
           element: <AddTask></AddTask>
-          // loader: ()=> fetch('https://assignment11-server-side-chi.vercel.app/api/v1/allFood')
+          // loader: ()=> fetch('https://task-management-coder-squad-server.vercel.app/api/v1/allFood')
         },
         {
-          path: 'updateFood/:id',
-          element: <UpdateFood></UpdateFood>,
-          loader: ({params})=> fetch(`https://assignment11-server-side-chi.vercel.app/api/v1/allFood/${params.id}`)
+          path: 'updateTask/:id',
+          element: <UpdateTask></UpdateTask>,
+          loader: ({params})=> fetch(`https://task-management-coder-squad-server.vercel.app/alltask/:id/${params.id}`)
           
         },
        

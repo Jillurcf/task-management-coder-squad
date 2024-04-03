@@ -131,26 +131,9 @@ const NavBar = () => {
                      Name: {user.displayName}
                     </button>
                   </li>
-                  {/* <li>
-                    <button className="btn btn-sm btn-ghost">
-                    {user.email}
-                    </button>
-                  </li> */}
-                  <li>
-                    <button className="btn btn-sm btn-ghost">
-                     <Link to='/addFood'>My Added Food Item</Link>
-                    </button>
-                  </li>
-                  <li>
-                    <button className="btn btn-sm btn-ghost">
-                    <Link to="/addFood"> Add a Food Item</Link>
-                    </button>
-                  </li>
-                  <li>
-                    <button className="text-center btn btn-sm btn-ghost">
-                     <Link to="/orderdFood">My Ordered Food items</Link>
-                    </button>
-                  </li>
+                 
+                
+                 
                   <li>
                     <button
                       className="btn btn-sm btn-ghost mt-4"

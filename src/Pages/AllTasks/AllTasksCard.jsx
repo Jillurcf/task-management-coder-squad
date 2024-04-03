@@ -55,7 +55,8 @@ const allTasksCard = ({ tasks }) => {
               
             </div>
             <div className="flex justify-between">
-              <button onClick={()=> handleUpdate(_id)} className="btn btn-primary">Update </button>
+              <button className="btn btn-primary">
+              <Link to={`/updateTask/${_id}`}> Update</Link></button>
               <button onClick={() => handleDelete(_id)}  className="btn btn-warning">Delete </button>
             </div>
             <button 

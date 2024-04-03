@@ -23,7 +23,7 @@ const AddTask = () => {
     if (user) {
       // console.log(email);
       fetch(
-        `https://assignment11-server-side-chi.vercel.app/api/v1/allFood/food/${user?.email}`
+        `https://task-management-coder-squad-server.vercel.app/api/v1/allFood/food/${user?.email}`
       )
         .then((res) => res.json())
         .then((data) => setaddedFood(data));
@@ -40,7 +40,7 @@ const AddTask = () => {
     const email = form.userEmail.value;
     const description = form.des.value;
 
-    const addFood = {
+    const addTask = {
       task_name,
       task_image,
       task_category,
@@ -48,11 +48,11 @@ const AddTask = () => {
       email,
       description,
     };
-    console.log(addFood);
+    console.log(addTask);
 
     axios.post(
-      "http://localhost:5000/addTask",
-      addFood,
+      "https://task-management-coder-squad-server.vercel.app/addTask",
+      addTask,
       { withCredentials: true }
     );
     Swal.fire("Food Added");
@@ -73,7 +73,7 @@ Swal.fire({
   confirmButtonText: "Yes, delete it!",
 }).then((result) => {
   if (result.isConfirmed) {
-    fetch(`https://assignment11-server-side-chi.vercel.app/api/v1/allFood/${id}`, {
+    fetch(`https://task-management-coder-squad-server.vercel.app/api/v1/allFood/${id}`, {
       method: 'DELETE'
        
     })
