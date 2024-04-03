@@ -30,6 +30,7 @@ const AllTasks = () => {
       .then((res) => res.json())
       .then((data) => setCount(data.count));
   }, []);
+  console.log(pages);
 
   useEffect(() => {
     fetch(
