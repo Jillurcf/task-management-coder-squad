@@ -5,7 +5,8 @@ import { motion } from "framer-motion";
 
 
 const NavBar = () => {
-  const { user, logOut } = useContext(AuthContext);
+  const { user, loggedOut } = useContext(AuthContext);
+  
 
   const navLinks = (
     <>
@@ -58,7 +59,7 @@ const NavBar = () => {
   );
 
   const handleLogOut = () => {
-    logOut()
+    loggedOut()
       .then((result) => console.log(result))
       .catch((error) => console.log(error));
   };

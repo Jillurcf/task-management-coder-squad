@@ -8,7 +8,6 @@ import AllTasks from "../Pages/AllTasks/AllTasks";
 import Blog from "../Pages/Blog/Blog";
 import SignIn from "../Pages/SignIn/SignIn";
 import Register from "../Pages/Register/Register";
-import SeeDetail from "../Pages/AllTasks/SeeDetail";
 import PrivateRoute from "./PrivateRoute";
 import UserProfile from "../Pages/UserProfile/UserProfile";
 import AddTask from "../Pages/AddTask/AddTask";
@@ -26,23 +25,17 @@ const router = createBrowserRouter([
         },
         {
           path:'allTasks',
-          element: <AllTasks></AllTasks>
+          element: <PrivateRoute><AllTasks></AllTasks></PrivateRoute>
         },
         {
           path: 'blog',
           element: <Blog></Blog>
         },
-        {
-          path: 'seeDetail/:id',
-          element: <SeeDetail></SeeDetail>,
-          loader: ({params})=> fetch(`https://task-management-coder-squad-server.vercel.app/api/v1/allFood/${params.id}`)
-
-        },
        
         {
           path: 'addTask',
           element: <AddTask></AddTask>
-          // loader: ()=> fetch('https://task-management-coder-squad-server.vercel.app/api/v1/allFood')
+          
         },
         {
           path: 'updateTask/:id',
@@ -50,10 +43,7 @@ const router = createBrowserRouter([
           loader: ({params})=> fetch(`https://task-management-coder-squad-server.vercel.app/alltask/:id/${params.id}`)
           
         },
-       
-       
-        
-
+          
     ]
   },
   {

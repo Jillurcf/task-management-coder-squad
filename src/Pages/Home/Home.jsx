@@ -1,15 +1,13 @@
 import { Helmet } from "react-helmet-async";
 
-import SwiperSlider from "./SwiperSlider";
-import AllFoodItem from "../AllTasks/AllTasks";
 import UseAuth from "../../Hooks/UseAuth";
-import useAllFood from "../../Hooks/useAllTasks";
-import HomeAllFood from "./Banner";
+
 import BookATable from "./SetAMeeting";
-import SeasonalMenu from "./SeeMore";
+import SeeMore from "./SeeMore";
+import Banner from "./Banner";
 
 const Home = () => {
-    const allFood = useAllFood();
+   
     const {loading} = UseAuth();
         if(loading){
         return <progress className="progress w-56"></progress>
@@ -22,10 +20,9 @@ const Home = () => {
             <Helmet>
             <title>TM | Home</title>
             </Helmet>
-           
-      
-           <HomeAllFood ></HomeAllFood>
-           <SeasonalMenu></SeasonalMenu>
+           <Banner></Banner>
+           <SeeMore></SeeMore>
+           {/* <SeasonalMenu></SeasonalMenu> */}
            <BookATable></BookATable>
           
         </div>

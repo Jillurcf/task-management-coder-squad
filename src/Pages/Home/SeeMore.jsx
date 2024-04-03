@@ -1,6 +1,5 @@
-import image from '../../assets/images/seaonalMenu.jpg'
 
-const SeasonalMenu = () => {
+const seeMore = () => {
   return (
     <div className='mt-36'>
       <div
@@ -27,4 +26,4 @@ const SeasonalMenu = () => {
   );
 };
 
-export default SeasonalMenu;
+export default seeMore;

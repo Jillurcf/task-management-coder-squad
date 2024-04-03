@@ -62,7 +62,7 @@ const allTasksCard = ({ tasks }) => {
             <button 
           
             className="mt-12 btn btn-outline btn-secondary font-bold mx-auto flex w-full">
-             <Link to={`/seeDetail/${_id}`}> See Details</Link>
+             <Link to=""> See Details</Link>
             </button>
           </div>
         </div>

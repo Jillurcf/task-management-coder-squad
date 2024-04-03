@@ -30,7 +30,7 @@ const AddTask = () => {
     }
   }, [user]);
 
-  const handleAddFood = (e) => {
+  const handleAddTask = (e) => {
     e.preventDefault();
     const form = e.target;
     const task_name = form.taskName.value;
@@ -178,7 +178,7 @@ Swal.fire({
                 </div>
                 <div className="hero min-h-screen">
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl ">
-                  <form onSubmit={handleAddFood} className=" mt-36 card-body">
+                  <form onSubmit={handleAddTask} className=" mt-36 card-body">
                     <h1 className="text-2xl font-bold">Please add a Task</h1>
                     <div className="form-control">
                       <label className="label">
